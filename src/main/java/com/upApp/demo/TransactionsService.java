@@ -1,5 +1,6 @@
 package com.upApp.demo;
 
+import com.upApp.demo.dto.*;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,16 @@ public class TransactionsService {
         return transactionsRepository.findTransactionsCategoryCount();
     }
 
+    public List<TransactionsNetSpendingPerMonth> getAmountSavedPerMonth() {
+        return transactionsRepository.getAmountSavedPerMonth();
+    }
 
+    public List<TransactionsExpensesPerMonth> getExpensesPerMonth() {
+        return transactionsRepository.getExpensesPerMonth();
+    }
 
+    public List<TransactionsIncomePerMonth> getIncomePerMonth() {
+        return transactionsRepository.getIncomePerMonth();
+    }
 
 }
